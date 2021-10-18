@@ -12,16 +12,14 @@
 <body>
     <h1>Hello {{ name }} !</h1>
     {% set i = 1 %}
-    <div class="test">
         {% for product in products %}
             {{ product }}
             {% if i % 3 == 0 %}
-                </div>
-                <div class="test">
+                <br>
             {% endif %}
             {% set i = i + 1 %}
         {% endfor %}
-    </div>
+    
 
     <pre>
         {{ dump(products) }}
